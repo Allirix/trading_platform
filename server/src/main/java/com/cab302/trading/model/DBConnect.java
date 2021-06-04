@@ -20,7 +20,7 @@ public class DBConnect {
         System.out.println(new File(".").getAbsolutePath());
 
         try {
-            in = new FileInputStream("src\\main\\resources\\db.props");
+            in = new FileInputStream("server\\src\\main\\resources\\db.props");
             props.load(in);
             in.close();
 
