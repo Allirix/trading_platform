@@ -1,26 +1,25 @@
-//package com.cab302.trading.controller;
-//
-//
-//        import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
-//        import org.springframework.messaging.handler.annotation.MessageMapping;
-//        import org.springframework.messaging.handler.annotation.SendTo;
-//        import org.springframework.stereotype.Controller;
-//        import org.springframework.web.util.HtmlUtils;
-//
-//        import com.cab302.trading.model.Trades;
-//
-//@Controller
-//public class TradeController {
-//
-//    @MessageMapping("/guestchat")  // here
-//    @SendTo("/topic/guestchats")  // here
-//    public ChatOutMessage handleMessaging(ChatInMessage message) throws Exception {
-//        Thread.sleep(1000); // simulated delay
-//        message = null;
-//        message.getMessage();
-//        return new ChatOutMessage(HtmlUtils.htmlEscape(message.getMessage()));
-//    }
-//
+package com.cab302.trading.controller;
+
+
+        import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
+        import org.springframework.messaging.handler.annotation.MessageMapping;
+        import org.springframework.messaging.handler.annotation.SendTo;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.web.util.HtmlUtils;
+        import com.cab302.trading.model.outMessages.AssetOut;
+        import com.cab302.trading.model.inMessages.AssetIn;
+
+
+@Controller
+public class TradeController {
+
+    @MessageMapping("/asset")  // here
+    @SendTo("/topic/asset")  // here
+    public AssetOut handleAsset(AssetIn assetId) throws Exception {
+
+        return new AssetOut(HtmlUtils.htmlEscape("BOOOP"));
+    }
+
 //    @MessageMapping("/guestupdate")
 //    @SendTo("/topic/guestupdates")
 //    public ChatOutMessage handleUserTyping(ChatInMessage message) throws Exception {
@@ -40,4 +39,4 @@
 //        ChatOutMessage myError = new ChatOutMessage("An error happened.");
 //        return myError;
 //    }
-//}
+}
