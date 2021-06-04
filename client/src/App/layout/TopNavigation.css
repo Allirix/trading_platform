@@ -1,0 +1,146 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--header-color);
+  color: var(--top-bar-font-color);
+  width: 100%;
+
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+
+  padding: 0 var(--padding);
+  cursor: default;
+  z-index: 99;
+}
+
+header nav {
+  width: 100% !important;
+}
+
+header nav .mr-auto {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: center;
+}
+
+header .top-left {
+  display: flex;
+  flex-direction: row;
+}
+
+header span {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+header .profile-img {
+  width: 36px;
+  border-radius: 20em;
+  margin: 0 0.5em;
+}
+
+header .notification {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10em;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+header .notification:hover {
+}
+
+header .notification .notification-overlay {
+  color: white;
+  background-color: red;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  min-width: 15px;
+  position: absolute;
+  height: 15px;
+  bottom: 5px;
+  right: 5px;
+}
+
+header .notification img {
+  max-height: 20px;
+  filter: invert(1);
+}
+
+/*  */
+
+/*  */
+
+/* 
+ */
+
+.notifications {
+  width: 300px;
+  height: 0;
+  position: absolute;
+  display: none;
+  top: 63px;
+  transition: all 0.5s ease;
+  right: 62px;
+  border-radius: 5px 0px 5px 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.notifications h2 {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #999;
+}
+
+.notifications h2 span {
+  color: #f00;
+}
+
+.notifications-item {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 6px 9px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.notifications-item:hover {
+  background-color: #eee;
+}
+
+.notifications-item img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 9px;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.notifications-item .text h4 {
+  color: #777;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.notifications-item .text p {
+  color: #aaa;
+  font-size: 12px;
+}

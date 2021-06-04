@@ -1,0 +1,40 @@
+.inner-nav {
+  width: 100%;
+  background-color: var(--header-color);
+  height: fit-content;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.inner-nav .inner-nav-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin: auto;
+  max-width: var(--max-width);
+  height: fit-content;
+}
+
+.inner-nav .inner-nav-anchor {
+  min-width: 150px;
+  margin: 1em 10px 0 10px;
+
+  height: 52px;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+}
+
+.inner-nav-anchor:hover {
+  cursor: pointer;
+  border-bottom: 3px solid var(--primary-color);
+  text-decoration: none;
+}
+
+.inner-nav .active {
+  box-sizing: border-box;
+  border-bottom: 3px solid var(--primary-color);
+}

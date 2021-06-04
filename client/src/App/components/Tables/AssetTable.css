@@ -1,0 +1,34 @@
+.trade-section {
+  max-width: var(--max-width);
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+}
+.trade-section h3 {
+  margin-bottom: 0.25em;
+}
+
+.trade-section a {
+  font-weight: 700;
+  color: black;
+}
+
+.asset-card {
+  background-color: white;
+  box-shadow: 0 4px 4px -4px black;
+  padding: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.102);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.modal-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  color: rgb(0, 123, 255);
+}
+.modal-btn:hover {
+  text-decoration: underline;
+}

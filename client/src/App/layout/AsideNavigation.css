@@ -1,0 +1,92 @@
+aside {
+  height: calc(100% - var(--top-bar-height));
+  width: var(--left-bar-width);
+  position: fixed;
+  display: flex;
+
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+
+  z-index: 1;
+  top: var(--top-bar-height);
+  left: 0;
+  background: var(--header-color) !important;
+
+  color: var(--font-color-active);
+  overflow-x: hidden;
+
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+}
+
+aside h2 {
+  font-size: 13px;
+}
+
+aside nav {
+  width: 100%;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+aside nav hr {
+  padding: 0;
+  margin: 0;
+  width: 75%;
+  transform: translate(12.5%, 0);
+}
+
+aside nav span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 0.5em;
+  transition: all 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+aside .org-div {
+  width: 100%;
+  text-align: center;
+  padding: 1em 1em;
+  margin-bottom: 1em;
+}
+
+aside a {
+  display: block;
+  text-decoration: none;
+  width: 80%;
+  transition: all 0.3s ease;
+  padding: 8px 10px;
+  margin: 16px auto;
+  color: var(--top-bar-font-color);
+  border-radius: 5px;
+}
+aside a img {
+  transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  border-radius: 1em;
+  padding: 4px;
+  width: 30px;
+}
+
+aside a:hover {
+  background-color: var(--background-color);
+
+  color: black;
+  text-decoration: none;
+}
+
+aside .active {
+  background-color: var(--background-color);
+  color: black;
+  transform: scale(1.1);
+}
+
+aside .sign-out {
+  width: 100%;
+}
