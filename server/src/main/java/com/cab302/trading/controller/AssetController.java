@@ -9,15 +9,28 @@ package com.cab302.trading.controller;
         import com.cab302.trading.model.outMessages.AssetOut;
         import com.cab302.trading.model.inMessages.AssetIn;
 
+        import com.cab302.trading.model.Assets;
+
+        import java.sql.ResultSet;
+
 
 @Controller
-public class TradeController {
+public class AssetController {
 
     @MessageMapping("/asset")  // here
     @SendTo("/topic/asset")  // here
-    public AssetOut handleAsset(AssetIn assetId) throws Exception {
+    public AssetOut handleAsset(AssetIn asset) throws Exception {
 
-        return new AssetOut(HtmlUtils.htmlEscape("BOOOP"));
+        ResultSet resultSet = Assets.getAsset(asset.getAssetId());
+
+        resultSet.next();
+
+        String assetName = resultSet.getString("assetName");
+        int assetId = resultSet.getInt("assetID");
+
+        return new AssetOut(assetName, assetId);
+
+
     }
 
 //    @MessageMapping("/guestupdate")

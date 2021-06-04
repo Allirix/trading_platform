@@ -9,7 +9,6 @@ public class OrganisationUnits {
         int credits;
         int organisationUnitID;
 
-        //TODO
         List<Users> organisationMembers = new ArrayList<>(); // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
         public OrganisationUnits(String organisationName){

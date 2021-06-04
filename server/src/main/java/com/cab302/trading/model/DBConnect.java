@@ -51,22 +51,17 @@ public class DBConnect {
 
     }
 
-    public static Connection getInstance() throws SQLException {
+    public static Connection getInstance() {
 
-        if (connection == null) {
-            new DBConnect();
+        try {
+            if (connection == null) {
+                new DBConnect();
+            }
+
+        } catch (SQLException e) {
+            System.out.println("failed instance");
         }
         return connection;
-
     }
-
-
-
-
-
-
-    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-
 
 }

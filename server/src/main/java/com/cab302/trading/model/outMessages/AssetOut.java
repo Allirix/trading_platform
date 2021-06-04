@@ -1,43 +1,38 @@
 package com.cab302.trading.model.outMessages;
 
+import java.sql.Statement;
 import java.util.Date;
 
 import com.cab302.trading.model.Assets;
+import com.cab302.trading.model.DBConnect;
+import com.cab302.trading.model.inMessages.AssetIn;
 
 public class AssetOut {
 
-        private String assetId;
-//        private String groupName;
-//        private Date sentTimestamp;
+        private int assetId;
+        private String assetName;
 
         public AssetOut() {
 
         }
 
-        public AssetOut(String assetId) {
+        public AssetOut(String assetName, int assetId) {
+
+            this.assetName = assetName;
             this.assetId = assetId;
+
         }
 
-        public String getAssetId() { return assetId; }
+        public int getAssetId() { return assetId; }
 
+        public String getAssetName() {
+            return assetName;
+        }
 
-//        public void setContent(String content) {
-//            this.content = content;
-//        }
-//        public String getGroupName() {
-//            return groupName;
-//        }
-//        public void setGroupName(String groupName) {
-//            this.groupName = groupName;
-//        }
-//
-//        public Date getSentTimestamp() {
-//            return sentTimestamp;
-//        }
-//
-//        public void setSentTimestamp(Date sentTimestamp) {
-//            this.sentTimestamp = sentTimestamp;
-//        }
+        public void setAssetName(String assetName) {
+            this.assetName = assetName;
+        }
+
 
     }
 
